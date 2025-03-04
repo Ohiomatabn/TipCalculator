@@ -14,20 +14,35 @@ function claculateTip(){
 
   if(price === 0 || tip === 0 || noPeople === 0){
     result.innerHTML = 'Please fill all the input field';
+  } else if (noPeople === 1){
+      result.innerHTML = `
+      <li>Tip: ${tip}% </li>
+      <li>Price Before Tip: ₦${totalPriceBeforeTip}</li>
+      <li>Price After Tip: ₦${totalPriceWithTip} </li>
+    `
   } else{
     result.innerHTML = `
-    <li>Price Before Tip: ${totalPriceBeforeTip}</li>
-    <li>Price Before Tip: ${totalPriceBeforeTip}</li>
-    <li>Price After Tip: ${totalPriceWithTip} </li>
-    <li>Tip: ${tip} </li>
-    <li>Tip per Person: ${tipPerPerson} </li>
-    <li>Price Per Person: ${pricePerPerson} </li>
-    <li>Price Before Tip: ${price} </li>
+    <li>Tip: ${tip}% </li>
+    <li>Price Before Tip: ₦${totalPriceBeforeTip.toFixed(2)}</li>
+    <li>Price After Tip: ₦${totalPriceWithTip.toFixed(2)} </li>
+    <li>Tip per Person: ${tipPerPerson.toFixed(2)}% </li>
+    <li>Price Per Person: ₦${pricePerPerson.toFixed(2)} </li>
   `
   }
+}
+
+function clear(){
+  document.getElementById('price').value = '';
+  document.getElementById('tip').value = '';
+  document.getElementById('no-people').value = '1';
 }
 
 document.getElementById('calculate').addEventListener('click', (e) =>{
   e.preventDefault();
   claculateTip();
 });
+
+document.getElementById('clear').addEventListener('click',(e) =>{
+  e.preventDefault();
+  clear();
+})
