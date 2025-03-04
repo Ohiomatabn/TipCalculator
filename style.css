@@ -55,7 +55,7 @@ label{
 }
 
 button{
-  width: 100%;
+  width: 49.19%;
   border: none;
   padding: 1rem 2rem;
   background-color: #6666ff;
@@ -74,10 +74,26 @@ button:hover{
   color: #6666ff;
 }
 
+.clear{
+  background: transparent;
+  border: 1px solid #6666ff;
+  color: #6666ff;
+}
+
+.clear:hover{
+  border: 1px solid #6666ff;
+  background: #6666ff;
+  color: #fff;
+}
+
 #result{
   font-size: 2rem;
-  padding-top: 2.5rem;
-  text-align: center;
+  padding: 2.5rem 0;
   font-weight: bold;
   color: white;
+}
+
+li{
+  list-style: none;
+  padding: .5rem 0;
 }
