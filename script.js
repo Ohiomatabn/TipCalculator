@@ -53,6 +53,8 @@ function clear(){
   document.getElementById('tip').value = '';
   //Get the value of no-people and set it to 1
   document.getElementById('no-people').value = '1';
+  //GEt the #result and set it to null
+  document.getElementById('result').innerHTML = '';
 }
 
 
